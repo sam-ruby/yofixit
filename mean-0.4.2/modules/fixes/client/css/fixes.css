@@ -1,0 +1,48 @@
+.vendor-details,
+.vendor {
+  padding: 5px 0 0px 0;
+}
+.vendor-details > .body,
+.vendor > .body {
+  padding: 1em;
+  margin: 0 0 5px 0;
+}
+.vendor-details > .body > .h5,
+.vendor > .body > .h5 {
+  margin-top: 0;
+}
+.vendor-details > .body > .header > .person,
+.vendor > .body > .header > .person {
+  width: 40px;
+  height: 40px;
+}
+.vendor-details > .body > .header > .date,
+.vendor > .body > .header > .date {
+  font-size: .8em;
+  padding-top: 1em;
+}
+.vendor-details > .body > .header > .person-name,
+.vendor > .body > .header > .person-name {
+  color: #31708f;
+  font-weight: 500;
+}
+.vendor-details > .panel-heading > .h5,
+.vendor > .panel-heading > .h5 {
+  color: #31708f;
+}
+.vendor-details > .details,
+.vendor > .details {
+  margin-top: 0;
+}
+.vendor-details > .more,
+.vendor > .more {
+  text-align: center;
+  color: #0084bf;
+  font-weight: 700;
+  padding-bottom: 1em;
+}
+.vendor-details > .body {
+  padding: 1em;
+  margin: 0 0 5px 0;
+  border-bottom: 1px solid #eee;
+}

@@ -1,0 +1,22 @@
+<section>
+  <div class="page-header">
+    <h1>Households</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="household in vm.households"
+       ui-sref="households.view({ householdId: household._id })"
+       class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="household.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="household.user" ng-bind="household.user.displayName"></span>
+        <span ng-if="!household.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="household.name"></h4>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" ng-if="vm.households.$resolved && !vm.households.length">
+    No Households yet, why don't you <a ui-sref="households.create">create one</a>?
+  </div>
+</section>

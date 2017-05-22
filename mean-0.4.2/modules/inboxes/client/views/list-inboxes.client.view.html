@@ -1,0 +1,22 @@
+<section>
+  <div class="page-header">
+    <h1>Inboxes</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="inbox in vm.inboxes"
+       ui-sref="inboxes.view({ inboxId: inbox._id })"
+       class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="inbox.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="inbox.user" ng-bind="inbox.user.displayName"></span>
+        <span ng-if="!inbox.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="inbox.name"></h4>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" ng-if="vm.inboxes.$resolved && !vm.inboxes.length">
+    No Inboxes yet, why don't you <a ui-sref="inboxes.create">create one</a>?
+  </div>
+</section>
